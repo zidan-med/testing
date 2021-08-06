@@ -1,0 +1,22 @@
+{
+  "name": "gondemandtests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome  tests/",
+    "test:loginManager": " testcafe chrome tests/RestaurantTests/ManagerLoginTest.js --reporter html:reports/htmlReports/loginManagerReport.html",
+    "test:createDiscount": " testcafe chrome tests/RestaurantTests/createDiscountTest.js --reporter html:reports/htmlReports/createDiscountReport.html",
+    "test:createOption": " testcafe chrome tests/RestaurantTests/createOptionTest.js --reporter html:reports/htmlReports/createOptionReport.html",
+    "test:createOptionGroups": " testcafe chrome tests/RestaurantTests/createOptionGroupsTest.js --reporter html:reports/htmlReports/createOptionGroupsReport.html",
+    "test:navigation": " testcafe chrome tests/RestaurantTests/navigationTest.js --reporter html:reports/htmlReports/navigationReport.html",
+    "test:docker": " docker run -v ${PWD}/tests:/tests -it testcafe/testcafe chromium tests/RestaurantTests/createMealTest.js"
+  },
+  "author": "zidan",
+  "license": "ISC",
+  "devDependencies": {
+    "testcafe": "^1.15.0",
+    "typescript": "^4.3.5"
+  }
+  
+}
